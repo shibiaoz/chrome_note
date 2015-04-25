@@ -7,6 +7,7 @@ study chrome extensions noe
 - runtime.connect
 - runtiime.OnConnect
 
+eg: 发送消息
 ```
 chrome.runtime.sendMessage('Hello', function(response){
 	console.log(response);	
@@ -16,3 +17,14 @@ chrome.runtime.sendMessage('Hello', function(response){
 });
 ```
 `runtime.sendMessage([extensionId],message,[options],[callback])`
+
+eg:接受消息
+`chrome.runtime.onMessage`
+```
+chrome.runtime.onMessage.addListener(function(message, sender, sendResponse){
+    if(message == 'Hello'){
+        sendResponse('Hello from background.');
+    }
+    console.log(sender);
+});
+```
