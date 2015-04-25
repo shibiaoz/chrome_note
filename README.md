@@ -14,4 +14,3 @@ chrome.runtime.sendMessage('Hello', function(response){
 });
 ```
 `runtime.sendMessage([extensionId],message,[options],[callback])`
-`callback = function(response){}`
