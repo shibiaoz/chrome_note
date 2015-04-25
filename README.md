@@ -9,7 +9,9 @@ study chrome extensions noe
 
 ```
 chrome.runtime.sendMessage('Hello', function(response){
-	console.log(response);																	
+	console.log(response);	
+	// response id senden by sendResponse,the funtion
+	//as anonymous function's thrid param of noMessge 																
     document.write(response);
 });
 ```
