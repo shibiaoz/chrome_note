@@ -28,3 +28,4 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse){
     console.log(sender);
 });
 ```
+> message 标示接受到的消息，sender是一个对象是一个发送者，Object {id: "mgiiemelnmocjmaabfaklffadopfblij", url: "chrome-extension://mgiiemelnmocjmaabfaklffadopfblij/popup.html"}，主要包括id和url，sendRespoonse是一个发型消息的句柄
