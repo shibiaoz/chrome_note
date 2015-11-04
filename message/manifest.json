@@ -1,0 +1,35 @@
+{
+    "name": "A browser action with a popup that changes the page color.",
+    "version": "1.0",
+    "permissions": [
+        "contextMenus",
+        "activeTab",
+        "downloads",
+        "tabs",
+        "http://tieba.baidu.com/",
+        "declarativeContent",
+        "storage"
+    ],
+    "browser_action": {
+      "default_icon": "images/icon16.png",
+      "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "background": {
+        /* "scripts": ["bg.js"]*/
+        /*"persistent": false,*//*如果设为FALSE 的创建右键菜单时报错*/
+        "page": "background.html"/* ,也可以不写scripts通过background.html引入bg.js*/
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js" : ["jquery.min.js","injectscript.js"]
+      }
+    ],
+    "web_accessible_resources":["jquery.min.js","injectscript.js","popup.html"],
+    "manifest_version": 2
+}
