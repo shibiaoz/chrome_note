@@ -1,6 +1,11 @@
 # chrome_note
 study chrome extensions noe
 
+
+[david的插件参考](https://github.com/crispgm/)
+
+
+
 ## 页面间的通信方式 ##
 - runtime.sendMessage
 - runtime.onMessage
@@ -10,9 +15,9 @@ study chrome extensions noe
 eg: 发送消息
 ```
 chrome.runtime.sendMessage('Hello', function(response){
-	console.log(response);	
+	console.log(response);
 	// response id senden by sendResponse,the funtion
-	//as anonymous function's thrid param of noMessge 																
+	//as anonymous function's thrid param of noMessge
     document.write(response);
 });
 ```
